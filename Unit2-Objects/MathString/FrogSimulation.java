@@ -36,9 +36,13 @@ public class FrogSimulation{
 
         return result;
     }
-    public static void main(String[] args) {
-        FrogSimulation sim = new FrogSimulation(24, 5);
-        boolean sucess = sim.simulate();
-        System.out.println("Simulation result: " + sucess);
+    public double runSimulation(int num){
+        int count = 0;
+        for(int i =0; i <num; i++){
+            if(simulate()){
+                count++;
+            }
+        }
+        return count;
     }
 }
